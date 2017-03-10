@@ -71,13 +71,13 @@
                                         <rect key="frame" x="0.0" y="0.0" width="228" height="25"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.87" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="18"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder=" Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="L32-bg-tgz" customClass="FancyField" customModule="Social_Media_App" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="35" width="228" height="25"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.87" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="18"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" secureTextEntry="YES"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2RP-Gb-mAF" customClass="FancyBtn" customModule="Social_Media_App" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="70" width="228" height="37"/>
@@ -86,6 +86,9 @@
                                         <state key="normal" title="Sign In">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="signInPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lf6-y5-evi"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -98,6 +101,9 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="28"/>
                                 <state key="normal" image="f"/>
+                                <connections>
+                                    <action selector="facebookBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VfI-kR-WY5"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -119,6 +125,10 @@
                             <constraint firstItem="48v-KQ-22I" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="s1h-L2-75x"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="emailField" destination="ynA-eh-1QF" id="3Xq-DF-MZX"/>
+                        <outlet property="passField" destination="L32-bg-tgz" id="7iX-3B-eTy"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

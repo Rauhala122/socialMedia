@@ -21,6 +21,5 @@ class FancyBtn: UIButton {
         layer.cornerRadius = 2.0
  
     }
-
     
 }
