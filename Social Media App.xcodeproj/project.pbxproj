@@ -19,6 +19,7 @@
 		F63520351E71CECE00F7EEAD /* RoundedBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63520341E71CECE00F7EEAD /* RoundedBtn.swift */; };
 		F63520371E71D0B500F7EEAD /* FancyField.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63520361E71D0B500F7EEAD /* FancyField.swift */; };
 		F63520391E71D22200F7EEAD /* FancyBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63520381E71D22200F7EEAD /* FancyBtn.swift */; };
+		F63FFFA11E74069000BCB0C5 /* FeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63FFFA01E74069000BCB0C5 /* FeedVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		F63520341E71CECE00F7EEAD /* RoundedBtn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedBtn.swift; sourceTree = "<group>"; };
 		F63520361E71D0B500F7EEAD /* FancyField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FancyField.swift; sourceTree = "<group>"; };
 		F63520381E71D22200F7EEAD /* FancyBtn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FancyBtn.swift; sourceTree = "<group>"; };
+		F63FFFA01E74069000BCB0C5 /* FeedVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedVC.swift; sourceTree = "<group>"; };
 		FD436206C086F3D07823E4F2 /* Pods-Social Media App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Social Media App.release.xcconfig"; path = "Pods/Target Support Files/Pods-Social Media App/Pods-Social Media App.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -128,6 +130,7 @@
 			isa = PBXGroup;
 			children = (
 				F635201A1E708A1300F7EEAD /* SignInVC.swift */,
+				F63FFFA01E74069000BCB0C5 /* FeedVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -274,6 +277,7 @@
 				F63520301E71CC6500F7EEAD /* FancyView.swift in Sources */,
 				F635201B1E708A1300F7EEAD /* SignInVC.swift in Sources */,
 				F63520351E71CECE00F7EEAD /* RoundedBtn.swift in Sources */,
+				F63FFFA11E74069000BCB0C5 /* FeedVC.swift in Sources */,
 				F63520191E708A1300F7EEAD /* AppDelegate.swift in Sources */,
 				F63520331E71CCF700F7EEAD /* Constants.swift in Sources */,
 				F63520391E71D22200F7EEAD /* FancyBtn.swift in Sources */,

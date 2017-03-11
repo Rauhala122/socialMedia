@@ -10,6 +10,8 @@ import UIKit
 import FBSDKLoginKit
 import FBSDKCoreKit
 import Firebase
+import SwiftKeychainWrapper
+
 
 class SignInVC: UIViewController {
 
@@ -17,6 +19,15 @@ class SignInVC: UIViewController {
     @IBOutlet weak var emailField: FancyField!
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        if let _ = KeychainWrapper.standard.string(forKey: KEY_UID) {
+            print("SASKA: ID found in keychain")
+            performSegue(withIdentifier: "FeedVC", sender: nil)
+        }
     }
 
     @IBAction func facebookBtnPressed(_ sender: Any) {
@@ -39,15 +50,20 @@ class SignInVC: UIViewController {
         }
         
     }
-    
     func firebaseAuth(_ credential: FIRAuthCredential) {
         FIRAuth.auth()?.signIn(with: credential, completion: { (user, error) in
             if error != nil {
-                print("SASKA: Unable to facebook autht with firebase - \(error)")
+                print("SASKA: Unable to facebook autht with Firebase - \(error)")
 
             } else {
-                print("SASKA: Successfully auth with firebase")
-            }
+                print("SASKA: Successfully auth with Firebase")
+                
+                if let user = user {
+               
+                    self.completedSignIn(id: user.uid)
+                    
+                }
+        }
         })
     }
     @IBAction func signInPressed(_ sender: Any) {
@@ -57,22 +73,38 @@ class SignInVC: UIViewController {
             FIRAuth.auth()?.signIn(withEmail: email, password: pass, completion: { (user, error) in
                 if error == nil {
                     print("SASKA: User Signed in with Firebase")
+                
+                    if let user = user {
+                        self.completedSignIn(id: user.uid)
+                    }
+                  
                 } else {
                     FIRAuth.auth()?.createUser(withEmail: email, password: pass, completion: { (user, error) in
                         if error != nil {
-                            print("SASKA: Unable to auth with firebase email")
+                            print("SASKA: Unable to auth with Firebase email")
                         } else {
                             print("SASKA: Firebase user created")
-                        }
-                    })
-                }
+                            if let user = user {
+                            self.completedSignIn(id: user.uid)
+                            }
+                         }
+                     })
+                  }
                 
-                
-            })
+              })
             
-        }
+          }
         
+      }
+    
+    
+    func  completedSignIn(id: String) {
+        let keychainresult = KeychainWrapper.standard.set(id, forKey: KEY_UID)
+        print("SASKA: Data saved to keychain \(keychainresult)")
+        performSegue(withIdentifier: "FeedVC", sender: nil)
     }
     
 }
 
+
+    
