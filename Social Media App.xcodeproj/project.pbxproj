@@ -20,6 +20,7 @@
 		F63520371E71D0B500F7EEAD /* FancyField.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63520361E71D0B500F7EEAD /* FancyField.swift */; };
 		F63520391E71D22200F7EEAD /* FancyBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63520381E71D22200F7EEAD /* FancyBtn.swift */; };
 		F63FFFA11E74069000BCB0C5 /* FeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63FFFA01E74069000BCB0C5 /* FeedVC.swift */; };
+		F6BD79EB1E7465CD000B404A /* Circleimage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6BD79EA1E7465CD000B404A /* Circleimage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		F63520361E71D0B500F7EEAD /* FancyField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FancyField.swift; sourceTree = "<group>"; };
 		F63520381E71D22200F7EEAD /* FancyBtn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FancyBtn.swift; sourceTree = "<group>"; };
 		F63FFFA01E74069000BCB0C5 /* FeedVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedVC.swift; sourceTree = "<group>"; };
+		F6BD79EA1E7465CD000B404A /* Circleimage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Circleimage.swift; sourceTree = "<group>"; };
 		FD436206C086F3D07823E4F2 /* Pods-Social Media App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Social Media App.release.xcconfig"; path = "Pods/Target Support Files/Pods-Social Media App/Pods-Social Media App.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -122,6 +124,7 @@
 				F63520341E71CECE00F7EEAD /* RoundedBtn.swift */,
 				F63520361E71D0B500F7EEAD /* FancyField.swift */,
 				F63520381E71D22200F7EEAD /* FancyBtn.swift */,
+				F6BD79EA1E7465CD000B404A /* Circleimage.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -281,6 +284,7 @@
 				F63520191E708A1300F7EEAD /* AppDelegate.swift in Sources */,
 				F63520331E71CCF700F7EEAD /* Constants.swift in Sources */,
 				F63520391E71D22200F7EEAD /* FancyBtn.swift in Sources */,
+				F6BD79EB1E7465CD000B404A /* Circleimage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

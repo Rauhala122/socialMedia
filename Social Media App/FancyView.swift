@@ -18,6 +18,7 @@ class FancyView: UIView {
         self.layer.shadowOpacity = 0.0
         self.layer.shadowRadius = 5.0
         self.layer.shadowOffset = CGSize(width: 1.0, height: 1.0)
+        layer.cornerRadius = 2.0
     }
     
 }
