@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		06A78FD3F2F1FE7DC153EB7D /* Pods_Social_Media_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BC66CD725CD74D7E054FFC0 /* Pods_Social_Media_App.framework */; };
+		F60A245A1E747EC80096918A /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F60A24591E747EC80096918A /* PostCell.swift */; };
 		F63520191E708A1300F7EEAD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63520181E708A1300F7EEAD /* AppDelegate.swift */; };
 		F635201B1E708A1300F7EEAD /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F635201A1E708A1300F7EEAD /* SignInVC.swift */; };
 		F635201E1E708A1300F7EEAD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F635201C1E708A1300F7EEAD /* Main.storyboard */; };
@@ -26,6 +27,7 @@
 /* Begin PBXFileReference section */
 		02B978037EC9B196621A3795 /* Pods-Social Media App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Social Media App.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Social Media App/Pods-Social Media App.debug.xcconfig"; sourceTree = "<group>"; };
 		8BC66CD725CD74D7E054FFC0 /* Pods_Social_Media_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Social_Media_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F60A24591E747EC80096918A /* PostCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
 		F6246EC01E732DDB00D60765 /* Social Media App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Social Media App.entitlements"; sourceTree = "<group>"; };
 		F63520151E708A1300F7EEAD /* Social Media App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Social Media App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F63520181E708A1300F7EEAD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -134,6 +136,7 @@
 			children = (
 				F635201A1E708A1300F7EEAD /* SignInVC.swift */,
 				F63FFFA01E74069000BCB0C5 /* FeedVC.swift */,
+				F60A24591E747EC80096918A /* PostCell.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -285,6 +288,7 @@
 				F63520331E71CCF700F7EEAD /* Constants.swift in Sources */,
 				F63520391E71D22200F7EEAD /* FancyBtn.swift in Sources */,
 				F6BD79EB1E7465CD000B404A /* Circleimage.swift in Sources */,
+				F60A245A1E747EC80096918A /* PostCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
