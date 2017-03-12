@@ -59,8 +59,8 @@ class SignInVC: UIViewController {
                 print("SASKA: Successfully auth with Firebase")
                 
                 if let user = user {
-               
-                    self.completedSignIn(id: user.uid)
+                    let userData = ["provider": credential.provider]
+                    self.completedSignIn(id: user.uid, userData: userData)
                     
                 }
         }
@@ -75,7 +75,8 @@ class SignInVC: UIViewController {
                     print("SASKA: User Signed in with Firebase")
                 
                     if let user = user {
-                        self.completedSignIn(id: user.uid)
+                            let userData = ["provier": user.providerID]
+                        self.completedSignIn(id: user.uid, userData: userData)
                     }
                   
                 } else {
@@ -85,7 +86,8 @@ class SignInVC: UIViewController {
                         } else {
                             print("SASKA: Firebase user created")
                             if let user = user {
-                            self.completedSignIn(id: user.uid)
+                                let userData = ["provier": user.providerID]
+                            self.completedSignIn(id: user.uid, userData: userData)
                             }
                          }
                      })
@@ -98,7 +100,8 @@ class SignInVC: UIViewController {
       }
     
     
-    func  completedSignIn(id: String) {
+    func  completedSignIn(id: String, userData: Dictionary<String, String>) {
+        DataService.ds.createFirebaseDBUser(uid: id, userData: userData)
         let keychainresult = KeychainWrapper.standard.set(id, forKey: KEY_UID)
         print("SASKA: Data saved to keychain \(keychainresult)")
         performSegue(withIdentifier: "FeedVC", sender: nil)
