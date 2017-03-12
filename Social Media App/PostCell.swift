@@ -31,7 +31,7 @@ class PostCell: UITableViewCell {
             self.postImage.image = img
         } else {
              let ref = FIRStorage.storage().reference(forURL: post.imageUrl)
-                ref.data(withMaxSize: 2 * 1024 * 1024, completion: { (data, error) in
+                ref.data(withMaxSize: 4 * 5000 * 5000, completion: { (data, error) in
                     if error != nil {
                         print("SASKA: Unable to download image from firebase storage")
                     } else {

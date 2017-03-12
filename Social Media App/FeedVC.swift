@@ -11,12 +11,16 @@ import Firebase
 
 class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
+
+    @IBOutlet weak var captionField: FancyField!
     @IBOutlet weak var addedImage: Circleimage!
     @IBOutlet weak var tableView: UITableView!
 
     var posts = [Post]()
 
     var imagePicker: UIImagePickerController!
+    
+    var imageSelected = false
     
     static var imageCache: NSCache<NSString, UIImage> = NSCache()
     
@@ -94,7 +98,7 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         
         if let image = info[UIImagePickerControllerEditedImage] as? UIImage {
-        
+              imageSelected = true
                addedImage.image = image
         }
             imagePicker.dismiss(animated: true, completion: nil)
@@ -105,6 +109,44 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
     @IBAction func imagePickerPressed(_ sender: Any) {
       print("imagepicker tapped")
         present(imagePicker, animated: true, completion: nil)
+    }
+    
+    @IBAction func postPressed(_ sender: Any) {
+    
+        guard let caption = captionField.text, caption != "" else {
+           print("SASKA: Caption must be entered")
+            return
+        }
+        
+        guard let img = addedImage.image, imageSelected == true else {
+            print("SASKA: Image must be selected")
+            return
+        }
+        
+        if let imgData = UIImageJPEGRepresentation(img, 0.2) {
+            
+            let imgUid = NSUUID().uuidString
+            let metadata = FIRStorageMetadata()
+            metadata.contentType = "image/jpeg"
+            
+            DataService.ds.REF_POSTS_IMAGES.child(imgUid).put(imgData, metadata: metadata) {
+                (metadata, error) in
+             
+                if error != nil {
+                    print("SASAK: Error when uploading image to firebase storage")
+                } else {
+                    print("SASKA: Successfully uploaded image to firebase storage")
+                    let downloadUrl = metadata?.downloadURL()?.absoluteString
+                    
+                }
+                
+                
+            }
+            
+        }
+        
+        
+        
     }
     
     
