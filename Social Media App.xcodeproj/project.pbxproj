@@ -128,6 +128,7 @@
 		F635202D1E708CB800F7EEAD /* View */ = {
 			isa = PBXGroup;
 			children = (
+				F60A24591E747EC80096918A /* PostCell.swift */,
 				F635202F1E71CC6500F7EEAD /* FancyView.swift */,
 				F63520341E71CECE00F7EEAD /* RoundedBtn.swift */,
 				F63520361E71D0B500F7EEAD /* FancyField.swift */,
@@ -142,7 +143,6 @@
 			children = (
 				F635201A1E708A1300F7EEAD /* SignInVC.swift */,
 				F63FFFA01E74069000BCB0C5 /* FeedVC.swift */,
-				F60A24591E747EC80096918A /* PostCell.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";

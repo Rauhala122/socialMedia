@@ -23,10 +23,8 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         
         DataService.ds.REF_POSTS.observe(.value, with: { (snapshot) in
             
-            
             self.posts = []
 
-        
             if let snapshot = snapshot.children.allObjects as? [FIRDataSnapshot] {
                 for snap in snapshot {
                     print("SNAP: \(snap)")
@@ -42,7 +40,6 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
             
         })
         
-    
     }
     
     // Tableview Functions
@@ -58,17 +55,19 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-  
+        if let cell = tableView.dequeueReusableCell(withIdentifier: "PostCell") as? PostCell {
             let post = posts[indexPath.row]
-            print("SASKA: \(post.caption)")
-            
-       return tableView.dequeueReusableCell(withIdentifier: "PostCell") as! PostCell
+            cell.updateUi(post: post)
+            return cell
+        } else {
+        
+        return PostCell()
+        }
+       
         
         
     }
-    
-    
-    
+
     @IBAction func signOut(_ sender: Any) {
         let keychainResult = KeychainWrapper.standard.remove(key: KEY_UID)
         print("SASKA: ID removed in kaychain \(keychainResult)")
@@ -76,5 +75,4 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         performSegue(withIdentifier: "goToSignIn", sender: nil)
         
     }
-
 }
