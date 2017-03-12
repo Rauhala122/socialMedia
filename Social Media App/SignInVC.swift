@@ -102,7 +102,7 @@ class SignInVC: UIViewController {
     
     func  completedSignIn(id: String, userData: Dictionary<String, String>) {
         DataService.ds.createFirebaseDBUser(uid: id, userData: userData)
-        let keychainresult = KeychainWrapper.standard.set(id, forKey: KEY_UID)
+        let keychainresult = KeychainWrapper.defaultKeychainWrapper.set(id, forKey: KEY_UID)
         print("SASKA: Data saved to keychain \(keychainresult)")
         performSegue(withIdentifier: "FeedVC", sender: nil)
     }
