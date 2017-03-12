@@ -131,8 +131,8 @@
 				F60A24591E747EC80096918A /* PostCell.swift */,
 				F635202F1E71CC6500F7EEAD /* FancyView.swift */,
 				F63520341E71CECE00F7EEAD /* RoundedBtn.swift */,
-				F63520361E71D0B500F7EEAD /* FancyField.swift */,
 				F63520381E71D22200F7EEAD /* FancyBtn.swift */,
+				F63520361E71D0B500F7EEAD /* FancyField.swift */,
 				F6BD79EA1E7465CD000B404A /* Circleimage.swift */,
 			);
 			name = View;
