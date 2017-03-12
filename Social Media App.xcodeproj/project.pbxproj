@@ -22,6 +22,7 @@
 		F63520391E71D22200F7EEAD /* FancyBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63520381E71D22200F7EEAD /* FancyBtn.swift */; };
 		F63FFFA11E74069000BCB0C5 /* FeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63FFFA01E74069000BCB0C5 /* FeedVC.swift */; };
 		F6628F651E753FA000EEE091 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6628F641E753FA000EEE091 /* DataService.swift */; };
+		F6628F671E755E6700EEE091 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6628F661E755E6700EEE091 /* Post.swift */; };
 		F6BD79EB1E7465CD000B404A /* Circleimage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6BD79EA1E7465CD000B404A /* Circleimage.swift */; };
 /* End PBXBuildFile section */
 
@@ -45,6 +46,7 @@
 		F63520381E71D22200F7EEAD /* FancyBtn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FancyBtn.swift; sourceTree = "<group>"; };
 		F63FFFA01E74069000BCB0C5 /* FeedVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedVC.swift; sourceTree = "<group>"; };
 		F6628F641E753FA000EEE091 /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
+		F6628F661E755E6700EEE091 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		F6BD79EA1E7465CD000B404A /* Circleimage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Circleimage.swift; sourceTree = "<group>"; };
 		FD436206C086F3D07823E4F2 /* Pods-Social Media App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Social Media App.release.xcconfig"; path = "Pods/Target Support Files/Pods-Social Media App/Pods-Social Media App.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -118,6 +120,7 @@
 		F635202C1E708CB100F7EEAD /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				F6628F661E755E6700EEE091 /* Post.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -293,6 +296,7 @@
 				F63520371E71D0B500F7EEAD /* FancyField.swift in Sources */,
 				F63520301E71CC6500F7EEAD /* FancyView.swift in Sources */,
 				F635201B1E708A1300F7EEAD /* SignInVC.swift in Sources */,
+				F6628F671E755E6700EEE091 /* Post.swift in Sources */,
 				F63520351E71CECE00F7EEAD /* RoundedBtn.swift in Sources */,
 				F63FFFA11E74069000BCB0C5 /* FeedVC.swift in Sources */,
 				F6628F651E753FA000EEE091 /* DataService.swift in Sources */,
